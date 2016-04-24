@@ -1,42 +1,42 @@
 /**
- * Created by YikaJ on 15/6/17.
+ * Created by chacha on 16/4/24.
  */
 'use strict';
+
 export default class TodoItem extends React.Component{
 
     // 处理任务是否完成状态
-    handlerChange(){
+    handleChange() {
         let isDone = !this.props.isDone;
         this.props.changeTodoState(this.props.index, isDone);
     }
 
     // 鼠标移入
-    handlerMouseOver(){
+    handleMouseOver() {
         React.findDOMNode(this.refs.deleteBtn).style.display = "inline";
     }
 
     // 鼠标移出
-    handlerMouseOut(){
+    handleMouseOut() {
         React.findDOMNode(this.refs.deleteBtn).style.display = "none";
     }
 
     // 删除当前任务
-    handlerDelete(){
+    handleDelete() {
         this.props.deleteTodo(this.props.index);
     }
 
-    render(){
-        let doneStyle = this.props.isDone ? {textDecoration: 'line-through'} : {textDecoration: 'none'};
+    render() {
 
+        let doneStyle = this.props.isDone ? {textDecoration: 'line-through'} : {textDecoration: 'none'};
+        
         return (
-            <li
-                onMouseOver={this.handlerMouseOver.bind(this)}
-                onMouseOut={this.handlerMouseOut.bind(this)}
-            >
-                <input type="checkbox" checked={this.props.isDone} onChange={this.handlerChange.bind(this)}/>
+            <li onMouseOver={this.handleMouseOver.bind(this)} 
+                onMouseOut={this.handleMouseOut.bind(this)}>
+                <input type="checkbox" onChange={this.handleChange.bind(this)}/>
                 <span style={doneStyle}>{this.props.text}</span>
-                <button ref="deleteBtn" onClick={this.handlerDelete.bind(this)} style={{'display': 'none'}} className="fr">删除</button>
+                <button style={{'display': 'none'}} ref="deleteBtn" className="fr" onClick={this.handleDelete.bind(this)}>删除</button>
             </li>
         )
     }
-}
+}false

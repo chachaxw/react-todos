@@ -92,7 +92,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(4)();
-	exports.push([module.id, "body {\n  background: #f5f5f5; }\n\nheader h1 {\n  text-align: center;\n  text-decoration: underline; }\n\n.container {\n  width: 760px;\n  margin: 0 auto; }\n\n.fl {\n  float: left; }\n\n.fr {\n  float: right; }\n\n.clearfix:after {\n  content: \"\";\n  display: table;\n  height: 0;\n  clear: both; }\n\n.panel {\n  background: #fff;\n  border: 1px solid #ddd;\n  padding: 8px;\n  box-shadow: 1px 1px 1px #000; }\n  .panel .panel-header {\n    border-bottom: 3px solid #ddd; }\n    .panel .panel-header input {\n      width: 90%;\n      background: url("+__webpack_require__(5)+") no-repeat;\n      padding: 5px 5px;\n      padding-left: 50px;\n      font-size: 24px;\n      border: none; }\n\n.todo-list {\n  list-style: none;\n  padding: 0; }\n  .todo-list li {\n    border-bottom: 1px solid #ddd;\n    padding: 10px;\n    font-size: 18px; }\n    .todo-list li input[type=checkbox] {\n      margin-right: 10px; }\n    .todo-list li button {\n      font-size: 14px; }\n\n.todo-footer {\n  margin-left: 10px; }\n  .todo-footer input[type=checkbox] {\n    margin-right: 10px; }\n", ""]);
+	exports.push([module.id, "body {\n  background: #f5f5f5; }\n\nheader h1 {\n  text-align: center;\n  text-decoration: underline; }\n\n.container {\n  width: 760px;\n  margin: 0 auto; }\n\n.fl {\n  float: left; }\n\n.fr {\n  float: right; }\n\n.clearfix:after {\n  content: \"\";\n  display: table;\n  height: 0;\n  clear: both; }\n\n.panel {\n  background: #fff;\n  border: 1px solid #ddd;\n  padding: 8px;\n  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); }\n  .panel .panel-header {\n    border-bottom: 3px solid #ddd; }\n    .panel .panel-header input {\n      width: 90%;\n      background: url("+__webpack_require__(5)+") no-repeat;\n      padding: 5px 5px;\n      padding-left: 50px;\n      font-size: 24px;\n      border: none; }\n\n.todo-list {\n  list-style: none;\n  padding: 0; }\n  .todo-list li {\n    border-bottom: 1px solid #ddd;\n    padding: 10px;\n    font-size: 18px; }\n    .todo-list li input[type=checkbox] {\n      margin-right: 10px; }\n    .todo-list li button {\n      font-size: 14px; }\n\n.todo-footer {\n  margin-left: 10px; }\n  .todo-footer input[type=checkbox] {\n    margin-right: 10px; }\n", ""]);
 
 /***/ },
 /* 4 */
@@ -386,21 +386,21 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
-	 * Created by YikaJ on 15/6/16.
+	 * Created by chacha on 16/4/24.
 	 */
-	"use strict";
+	'use strict';
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; desc = parent = getter = undefined; _again = false; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(8);
 
@@ -423,23 +423,23 @@
 	var _TodoFooterJs2 = _interopRequireDefault(_TodoFooterJs);
 
 	var App = (function (_React$Component) {
+	    _inherits(App, _React$Component);
+
 	    function App() {
 	        _classCallCheck(this, App);
 
 	        _get(Object.getPrototypeOf(App.prototype), "constructor", this).call(this);
-	        this.db = new _localDb2["default"]("React-Todos");
+	        this.db = new _localDb2["default"]('React-Todos');
 	        this.state = {
 	            todos: this.db.get("todos") || [],
 	            isAllChecked: false
 	        };
 	    }
 
-	    _inherits(App, _React$Component);
+	    // 判断是否所有任务的状态都完成，同步底部的全选框
 
 	    _createClass(App, [{
 	        key: "allChecked",
-
-	        // 判断是否所有任务的状态都完成，同步底部的全选框
 	        value: function allChecked() {
 	            var isAllChecked = false;
 	            if (this.state.todos.every(function (todo) {
@@ -449,21 +449,21 @@
 	            }
 	            this.setState({ todos: this.state.todos, isAllChecked: isAllChecked });
 	        }
-	    }, {
-	        key: "addTodo",
 
 	        // 添加任务，是传递给Header组件的方法
+	    }, {
+	        key: "addTodo",
 	        value: function addTodo(todoItem) {
 	            this.state.todos.push(todoItem);
 	            this.allChecked();
-	            this.db.set("todos", this.state.todos);
+	            this.db.set('todos', this.state.todos);
 	        }
-	    }, {
-	        key: "changeTodoState",
 
 	        // 改变任务状态，传递给TodoItem和Footer组件的方法
+	    }, {
+	        key: "changeTodoState",
 	        value: function changeTodoState(index, isDone) {
-	            var isChangeAll = arguments[2] === undefined ? false : arguments[2];
+	            var isChangeAll = arguments.length <= 2 || arguments[2] === undefined ? false : arguments[2];
 
 	            if (isChangeAll) {
 	                this.setState({
@@ -477,30 +477,30 @@
 	                this.state.todos[index].isDone = isDone;
 	                this.allChecked();
 	            }
-	            this.db.set("todos", this.state.todos);
+	            this.db.set('todos', this.state.todos);
 	        }
-	    }, {
-	        key: "clearDone",
 
 	        // 清除已完成的任务，传递给Footer组件的方法
+	    }, {
+	        key: "clearDone",
 	        value: function clearDone() {
 	            var todos = this.state.todos.filter(function (todo) {
 	                return !todo.isDone;
 	            });
 	            this.setState({
 	                todos: todos,
-	                isAllChecked: false
+	                isAllChecked: true
 	            });
-	            this.db.set("todos", todos);
+	            this.db.set('todos', todos);
 	        }
-	    }, {
-	        key: "deleteTodo",
 
 	        // 删除当前的任务，传递给TodoItem的方法
+	    }, {
+	        key: "deleteTodo",
 	        value: function deleteTodo(index) {
 	            this.state.todos.splice(index, 1);
 	            this.setState({ todos: this.state.todos });
-	            this.db.set("todos", this.state.todos);
+	            this.db.set('todos', this.state.todos);
 	        }
 	    }, {
 	        key: "render",
@@ -511,12 +511,15 @@
 	                    return todo.isDone;
 	                })).length || 0
 	            };
+
+	            console.log(props);
+
 	            return _react2["default"].createElement(
 	                "div",
 	                { className: "panel" },
 	                _react2["default"].createElement(_TodoHeaderJs2["default"], { addTodo: this.addTodo.bind(this) }),
-	                _react2["default"].createElement(_TodoMainJs2["default"], { deleteTodo: this.deleteTodo.bind(this), todos: this.state.todos, changeTodoState: this.changeTodoState.bind(this) }),
-	                _react2["default"].createElement(_TodoFooterJs2["default"], _extends({ isAllChecked: this.state.isAllChecked, clearDone: this.clearDone.bind(this) }, props, { changeTodoState: this.changeTodoState.bind(this) }))
+	                _react2["default"].createElement(_TodoMainJs2["default"], { todos: this.state.todos, changeTodoState: this.changeTodoState.bind(this), deleteTodo: this.deleteTodo.bind(this) }),
+	                _react2["default"].createElement(_TodoFooterJs2["default"], _extends({ clearDone: this.clearDone.bind(this) }, this.props, { isAllChecked: this.state.isAllChecked, changeTodoState: this.changeTodoState.bind(this), clearDone: this.clearDone.bind(this) }))
 	            );
 	        }
 	    }]);
@@ -618,39 +621,39 @@
 	/**
 	 * Created by YikaJ on 15/6/16.
 	 */
-	"use strict";
+	'use strict';
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(8);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	var TodoHeader = (function (_React$Component) {
+	    _inherits(TodoHeader, _React$Component);
+
 	    function TodoHeader() {
 	        _classCallCheck(this, TodoHeader);
 
-	        if (_React$Component != null) {
-	            _React$Component.apply(this, arguments);
-	        }
+	        _get(Object.getPrototypeOf(TodoHeader.prototype), "constructor", this).apply(this, arguments);
 	    }
 
-	    _inherits(TodoHeader, _React$Component);
-
 	    _createClass(TodoHeader, [{
-	        key: "handlerKeyUp",
+	        key: "handleKeyUp",
 
 	        // 绑定键盘回车事件，添加新任务
-	        value: function handlerKeyUp(event) {
+	        value: function handleKeyUp(event) {
 	            if (event.keyCode === 13) {
 	                var value = event.target.value;
 
@@ -662,6 +665,7 @@
 	                };
 	                event.target.value = "";
 	                this.props.addTodo(newTodoItem);
+	                //            console.log(newTodoItem);
 	            }
 	        }
 	    }, {
@@ -670,7 +674,7 @@
 	            return _react2["default"].createElement(
 	                "div",
 	                { className: "panel-header" },
-	                _react2["default"].createElement("input", { onKeyUp: this.handlerKeyUp.bind(this), type: "text", placeholder: "what's your task ?" })
+	                _react2["default"].createElement("input", { onKeyUp: this.handleKeyUp.bind(this), type: "text", placeholder: "what's your task ?" })
 	            );
 	        }
 	    }]);
@@ -686,9 +690,9 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
-	 * Created by YikaJ on 15/6/16.
+	 * Created by chacha on 16/4/24.
 	 */
-	"use strict";
+	'use strict';
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
@@ -697,11 +701,13 @@
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(8);
 
@@ -712,15 +718,13 @@
 	var _TodoItemJs2 = _interopRequireDefault(_TodoItemJs);
 
 	var TodoMain = (function (_React$Component) {
+	    _inherits(TodoMain, _React$Component);
+
 	    function TodoMain() {
 	        _classCallCheck(this, TodoMain);
 
-	        if (_React$Component != null) {
-	            _React$Component.apply(this, arguments);
-	        }
+	        _get(Object.getPrototypeOf(TodoMain.prototype), "constructor", this).apply(this, arguments);
 	    }
-
-	    _inherits(TodoMain, _React$Component);
 
 	    _createClass(TodoMain, [{
 	        key: "render",
@@ -750,71 +754,71 @@
 /***/ function(module, exports) {
 
 	/**
-	 * Created by YikaJ on 15/6/17.
+	 * Created by chacha on 16/4/24.
 	 */
-	"use strict";
+	'use strict';
+
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var TodoItem = (function (_React$Component) {
+	    _inherits(TodoItem, _React$Component);
+
 	    function TodoItem() {
 	        _classCallCheck(this, TodoItem);
 
-	        if (_React$Component != null) {
-	            _React$Component.apply(this, arguments);
-	        }
+	        _get(Object.getPrototypeOf(TodoItem.prototype), "constructor", this).apply(this, arguments);
 	    }
 
-	    _inherits(TodoItem, _React$Component);
-
 	    _createClass(TodoItem, [{
-	        key: "handlerChange",
+	        key: "handleChange",
 
 	        // 处理任务是否完成状态
-	        value: function handlerChange() {
+	        value: function handleChange() {
 	            var isDone = !this.props.isDone;
 	            this.props.changeTodoState(this.props.index, isDone);
 	        }
-	    }, {
-	        key: "handlerMouseOver",
 
 	        // 鼠标移入
-	        value: function handlerMouseOver() {
+	    }, {
+	        key: "handleMouseOver",
+	        value: function handleMouseOver() {
 	            React.findDOMNode(this.refs.deleteBtn).style.display = "inline";
 	        }
-	    }, {
-	        key: "handlerMouseOut",
 
 	        // 鼠标移出
-	        value: function handlerMouseOut() {
+	    }, {
+	        key: "handleMouseOut",
+	        value: function handleMouseOut() {
 	            React.findDOMNode(this.refs.deleteBtn).style.display = "none";
 	        }
-	    }, {
-	        key: "handlerDelete",
 
 	        // 删除当前任务
-	        value: function handlerDelete() {
+	    }, {
+	        key: "handleDelete",
+	        value: function handleDelete() {
 	            this.props.deleteTodo(this.props.index);
 	        }
 	    }, {
 	        key: "render",
 	        value: function render() {
-	            var doneStyle = this.props.isDone ? { textDecoration: "line-through" } : { textDecoration: "none" };
+
+	            var doneStyle = this.props.isDone ? { textDecoration: 'line-through' } : { textDecoration: 'none' };
 
 	            return React.createElement(
 	                "li",
-	                {
-	                    onMouseOver: this.handlerMouseOver.bind(this),
-	                    onMouseOut: this.handlerMouseOut.bind(this)
-	                },
-	                React.createElement("input", { type: "checkbox", checked: this.props.isDone, onChange: this.handlerChange.bind(this) }),
+	                { onMouseOver: this.handleMouseOver.bind(this),
+	                    onMouseOut: this.handleMouseOut.bind(this) },
+	                React.createElement("input", { type: "checkbox", onChange: this.handleChange.bind(this) }),
 	                React.createElement(
 	                    "span",
 	                    { style: doneStyle },
@@ -822,7 +826,7 @@
 	                ),
 	                React.createElement(
 	                    "button",
-	                    { ref: "deleteBtn", onClick: this.handlerDelete.bind(this), style: { "display": "none" }, className: "fr" },
+	                    { style: { 'display': 'none' }, ref: "deleteBtn", className: "fr", onClick: this.handleDelete.bind(this) },
 	                    "删除"
 	                )
 	            );
@@ -833,6 +837,7 @@
 	})(React.Component);
 
 	exports["default"] = TodoItem;
+	false;
 	module.exports = exports["default"];
 
 /***/ },
@@ -840,48 +845,49 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
-	 * Created by YikaJ on 15/6/16.
+	 * Created by chacha on 16/4/24.
 	 */
-	"use strict";
+	'use strict';
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(8);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	var TodoFooter = (function (_React$Component) {
+	    _inherits(TodoFooter, _React$Component);
+
 	    function TodoFooter() {
 	        _classCallCheck(this, TodoFooter);
 
-	        if (_React$Component != null) {
-	            _React$Component.apply(this, arguments);
-	        }
+	        _get(Object.getPrototypeOf(TodoFooter.prototype), "constructor", this).apply(this, arguments);
 	    }
 
-	    _inherits(TodoFooter, _React$Component);
-
 	    _createClass(TodoFooter, [{
-	        key: "handlerAllState",
+	        key: "handleAllState",
 
 	        // 处理全选与全不选的状态
-	        value: function handlerAllState(event) {
+	        value: function handleAllState(event) {
 	            this.props.changeTodoState(null, event.target.checked, true);
 	        }
-	    }, {
-	        key: "handlerClick",
 
 	        // 绑定点击事件，清除已完成
-	        value: function handlerClick() {
+	    }, {
+	        key: "handleClick",
+	        value: function handleClick() {
+	            //        console.log('hello')
 	            this.props.clearDone();
 	        }
 	    }, {
@@ -890,18 +896,18 @@
 	            return _react2["default"].createElement(
 	                "div",
 	                { className: "clearfix todo-footer" },
-	                _react2["default"].createElement("input", { checked: this.props.isAllChecked, onChange: this.handlerAllState.bind(this), type: "checkbox", className: "fl" }),
+	                _react2["default"].createElement("input", { checked: this.props.isAllChecked, onChange: this.handleAllState.bind(this), type: "checkbox", className: "fl" }),
 	                _react2["default"].createElement(
 	                    "span",
 	                    { className: "fl" },
 	                    this.props.todoDoneCount,
-	                    "已完成 / ",
+	                    " 已完成 / ",
 	                    this.props.todoCount,
-	                    "总数"
+	                    " 总数"
 	                ),
 	                _react2["default"].createElement(
 	                    "button",
-	                    { onClick: this.handlerClick.bind(this), className: "fr" },
+	                    { onClick: this.handleClick.bind(this), className: "fr" },
 	                    "清除已完成"
 	                )
 	            );

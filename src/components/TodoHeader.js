@@ -7,7 +7,7 @@ import React from "react";
 class TodoHeader extends React.Component {
 
     // 绑定键盘回车事件，添加新任务
-    handlerKeyUp(event){
+    handleKeyUp(event){
         if(event.keyCode === 13){
             let value = event.target.value;
 
@@ -19,13 +19,14 @@ class TodoHeader extends React.Component {
             };
             event.target.value = "";
             this.props.addTodo(newTodoItem);
+//            console.log(newTodoItem);
         }
     }
 
     render(){
         return (
             <div className="panel-header">
-                <input onKeyUp={this.handlerKeyUp.bind(this)} type="text" placeholder="what's your task ?"/>
+                <input onKeyUp={this.handleKeyUp.bind(this)} type="text" placeholder="what's your task ?"/>
             </div>
         )
     }
